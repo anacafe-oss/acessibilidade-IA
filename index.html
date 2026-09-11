@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Digital Seguro - Ajuda para a Terceira Idade</title>
+    <!-- Carregando Tailwind CSS para estilização responsiva e acessível -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos CSS personalizados para acessibilidade extra */
+        html {
+            font-size: 18px; /* Tamanho base de fonte aumentado para melhor leitura */
+        }
+        
+        /* Foco super visível para quem navega por teclado ou touch */
+        *:focus {
+            outline: 4px solid #1e40af !important;
+            outline-offset: 3px;
+        }
+
+        /* Animação suave para expansores */
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Estilo customizado para botões interativos de rádio */
+        .quiz-option:checked + label {
+            background-color: #dbeafe;
+            border-color: #2563eb;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans min-h-screen flex flex-col antialiased">
+
+    <!-- CABEÇALHO E BARRA DE ACESSIBILIDADE -->
+    <header class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <span class="text-4xl" role="img" aria-label="Escudo de proteção">🛡️</span>
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">Guia Digital Seguro</h1>
+                    <p class="text-blue-200 text-sm md:text-base">Sua internet fácil, segura e sem medo</p>
+                </div>
+            </div>
+
+            <!-- Dica rápida de leitura -->
+            <div class="bg-blue-800 px-4 py-2 rounded-xl text-center border border-blue-700">
+                <span class="text-sm font-semibold block text-blue-200">Precisa de ajuda?</span>
+                <span class="text-xs text-white">Toque nos botões grandes para abrir as dicas</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow space-y-8">
+
+        <!-- BANNER DE BOAS-VINDAS -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl shadow-md border-2 border-blue-200 text-center md:text-left flex flex-col md:flex-row items-center gap-6">
+            <div class="text-6xl md:text-8xl">👴👵</div>
+            <div class="space-y-3">
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-950">
+                    Bem-vindo(a)! Aprenda a navegar na internet com tranquilidade.
+                </h2>
+                <p class="text-lg text-slate-700 leading-relaxed">
+                    A internet é ótima para falar com a família e ver notícias, mas é importante se proteger dos golpes. Escolha um assunto abaixo para ler as dicas simples!
+                </p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 1: PRINCIPAIS DICAS DE SEGURANÇA (ACCORDION ACESSÍVEL) -->
+        <section aria-labelledby="dicas-titulo" class="space-y-4">
+            <h2 id="dicas-titulo" class="text-2xl md:text-3xl font-bold text-slate-900 flex items-center gap-3">
+                <span class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">1</span>
+                Dicas Principais de Segurança
+            </h2>
+
+            <div class="space-y-4">
+
+                <!-- Dica 1: WhatsApp -->
+                <details class="bg-white rounded-2xl shadow-sm border-2 border-slate-200 overflow-hidden group">
+                    <summary class="p-5 text-xl font-bold text-blue-900 bg-slate-50 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition-colors">
+                        <span class="flex items-center gap-3">
+                            <span class="text-3xl">📱</span> Golpes no WhatsApp (Parentes pedindo dinheiro)
+                        </span>
+                        <span class="text-2xl font-bold text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div class="p-6 bg-white space-y-4 text-slate-800 text-lg leading-relaxed border-t border-slate-200">
+                        <div class="bg-amber-50 border-l-8 border-amber-500 p-4 rounded-r-xl">
+                            <strong class="text-amber-900 block text-xl mb-1">⚠️ ATENÇÃO:</strong>
+                            Se um filho, neto ou conhecido mandar mensagem de um número novo pedindo dinheiro urgente, **NÃO pague!**
+                        </div>
+                        <h3 class="font-bold text-xl text-slate-900">O que você deve fazer:</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>Ligue para o número antigo do seu parente para confirmar se é ele mesmo.</li>
+                            <li>Nunca faça PIX ou transferência antes de falar por voz com a pessoa.</li>
+                            <li>Pergunte algo que só aquela pessoa saberia responder.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Dica 2: Ligações Falsas do Banco -->
+                <details class="bg-white rounded-2xl shadow-sm border-2 border-slate-200 overflow-hidden group">
+                    <summary class="p-5 text-xl font-bold text-blue-900 bg-slate-50 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition-colors">
+                        <span class="flex items-center gap-3">
+                            <span class="text-3xl">📞</span> Ligações Falsas do Banco
+                        </span>
+                        <span class="text-2xl font-bold text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div class="p-6 bg-white space-y-4 text-slate-800 text-lg leading-relaxed border-t border-slate-200">
+                        <div class="bg-red-50 border-l-8 border-red-500 p-4 rounded-r-xl">
+                            <strong class="text-red-900 block text-xl mb-1">🛑 REGRA DE OURO:</strong>
+                            O banco **NUNCA** liga pedindo sua senha, código por SMS ou pedido para baixar aplicativos.
+                        </div>
+                        <h3 class="font-bold text-xl text-slate-900">Se alguém ligar dizendo ser do banco:</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>Desligue o telefone imediatamente.</li>
+                            <li>Não digite senhas durante a chamada.</li>
+                            <li>Se ficar com dúvida, vá pessoalmente à sua agência ou use o número que está atrás do seu cartão bancário.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Dica 3: Links e Mensagens Estranhas -->
+                <details class="bg-white rounded-2xl shadow-sm border-2 border-slate-200 overflow-hidden group">
+                    <summary class="p-5 text-xl font-bold text-blue-900 bg-slate-50 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition-colors">
+                        <span class="flex items-center gap-3">
+                            <span class="text-3xl">🔗</span> Links e Promoções Falsas
+                        </span>
+                        <span class="text-2xl font-bold text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div class="p-6 bg-white space-y-4 text-slate-800 text-lg leading-relaxed border-t border-slate-200">
+                        <p>Sabe aquelas mensagens dizendo que você ganhou um prêmio, uma cesta básica, ou um desconto inacreditável? Na maioria das vezes, são golpes!</p>
+                        <h3 class="font-bold text-xl text-slate-900">Como se proteger:</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li><strong>Não clique</strong> em textos azuis (links) enviados por desconhecidos.</li>
+                            <li>Desconfie de ofertas boas demais para ser verdade.</li>
+                            <li>Não preencha cadastros com seus dados pessoais (CPF, RG, dados bancários) sem ter certeza do site.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Dica 4: Cuidado com Senhas -->
+                <details class="bg-white rounded-2xl shadow-sm border-2 border-slate-200 overflow-hidden group">
+                    <summary class="p-5 text-xl font-bold text-blue-900 bg-slate-50 cursor-pointer flex justify-between items-center hover:bg-blue-50 transition-colors">
+                        <span class="flex items-center gap-3">
+                            <span class="text-3xl">🔑</span> Como Guardar suas Senhas
+                        </span>
+                        <span class="text-2xl font-bold text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div class="p-6 bg-white space-y-4 text-slate-800 text-lg leading-relaxed border-t border-slate-200">
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>Anote suas senhas em um caderno físico mantido em local seguro na sua casa. É mais seguro do que no bloco de notas do celular.</li>
+                            <li>Nunca coloque datas de aniversário ou sequências fáceis como "123456".</li>
+                            <li>Não mostre nem fale suas senhas para vizinhos, entregadores ou estranhos.</li>
+                        </ul>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: TESTE INTERATIVO "É GOLPE?" -->
+        <section class="bg-blue-50 border-2 border-blue-300 p-6 md:p-8 rounded-3xl shadow-md space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">2</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-950">
+                    Teste Rápido: "Esta mensagem é um golpe?"
+                </h2>
+            </div>
+            
+            <p class="text-slate-700 text-lg">
+                Responda às perguntas abaixo marcando as opções para descobrir se a mensagem que você recebeu é segura:
+            </p>
+
+            <form class="space-y-6">
+                <!-- Pergunta 1 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-3">
+                    <p class="font-bold text-lg text-slate-900">1. A pessoa está pedindo dinheiro urgente ou dizendo que sua conta será bloqueada?</p>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <label class="flex items-center gap-3 p-3 border-2 border-slate-300 rounded-xl cursor-pointer hover:bg-slate-50 text-lg">
+                            <input type="radio" name="p1" value="sim" class="w-6 h-6 text-blue-600">
+                            <span>Sim</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 border-2 border-slate-300 rounded-xl cursor-pointer hover:bg-slate-50 text-lg">
+                            <input type="radio" name="p1" value="nao" class="w-6 h-6 text-blue-600">
+                            <span>Não</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-3">
+                    <p class="font-bold text-lg text-slate-900">2. A mensagem veio de um número desconhecido ou diferente do habitual?</p>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <label class="flex items-center gap-3 p-3 border-2 border-slate-300 rounded-xl cursor-pointer hover:bg-slate-50 text-lg">
+                            <input type="radio" name="p2" value="sim" class="w-6 h-6 text-blue-600">
+                            <span>Sim</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 border-2 border-slate-300 rounded-xl cursor-pointer hover:bg-slate-50 text-lg">
+                            <input type="radio" name="p2" value="nao" class="w-6 h-6 text-blue-600">
+                            <span>Não</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-3">
+                    <p class="font-bold text-lg text-slate-900">3. Há um link azul (endereço de site) pedindo para você clicar?</p>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <label class="flex items-center gap-3 p-3 border-2 border-slate-300 rounded-xl cursor-pointer hover:bg-slate-50 text-lg">
+                            <input type="radio" name="p3" value="sim" class="w-6 h-6 text-blue-600">
+                            <span>Sim</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 border-2 border-slate-300 rounded-xl cursor-pointer hover:bg-slate-50 text-lg">
+                            <input type="radio" name="p3" value="nao" class="w-6 h-6 text-blue-600">
+                            <span>Não</span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Resultado orientativo -->
+            <div class="bg-emerald-100 border-2 border-emerald-400 p-5 rounded-2xl text-emerald-950 space-y-2">
+                <h3 class="font-bold text-xl flex items-center gap-2">
+                    💡 Regra de Ouro da Segurança:
+                </h3>
+                <p class="text-lg">
+                    Se você respondeu <strong>"SIM"</strong> para qualquer uma das perguntas acima, <strong>pare tudo!</strong> Há grande chance de ser um golpe. Apague a mensagem ou peça ajuda a alguém da sua inteira confiança antes de fazer qualquer coisa.
+                </p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: O QUE FAZER SE CAIR EM UM GOLPE? -->
+        <section class="bg-red-50 border-2 border-red-300 p-6 md:p-8 rounded-3xl shadow-md space-y-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-red-950 flex items-center gap-3">
+                <span class="text-3xl">🚨</span> Caí em um Golpe ou Tenho Dúvidas. O que fazer?
+            </h2>
+            <p class="text-lg text-slate-800 leading-relaxed">
+                Não entre em pânico! Acontece com muitas pessoas. Siga estes passos imediatamente:
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                <div class="bg-white p-5 rounded-2xl border-2 border-red-200 space-y-2 shadow-sm">
+                    <span class="text-3xl block">1️⃣</span>
+                    <h3 class="font-bold text-lg text-slate-900">Avise o Banco</h3>
+                    <p class="text-slate-700">Ligue para o número oficial do seu banco e peça o bloqueio dos seus cartões ou da conta.</p>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border-2 border-red-200 space-y-2 shadow-sm">
+                    <span class="text-3xl block">2️⃣</span>
+                    <h3 class="font-bold text-lg text-slate-900">Fale com a Família</h3>
+                    <p class="text-slate-700">Avise um filho, neto ou amigo próximo para acompanhar o caso com você.</p>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border-2 border-red-200 space-y-2 shadow-sm">
+                    <span class="text-3xl block">3️⃣</span>
+                    <h3 class="font-bold text-lg text-slate-900">Registre na Polícia</h3>
+                    <p class="text-slate-700">Faça um Boletim de Ocorrência (B.O.) na delegacia mais próxima ou pela internet com ajuda de um parente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: GLOSSÁRIO SIMPLES DA INTERNET -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl shadow-md border-2 border-slate-200 space-y-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 flex items-center gap-3">
+                <span class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">3</span>
+                Dicionário da Internet (Termos Simples)
+            </h2>
+            <p class="text-slate-700 text-lg">
+                Entenda o significado das palavras difíceis do mundo digital:
+            </p>
+
+            <dl class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <dt class="font-bold text-blue-900 text-xl">🔗 Link</dt>
+                    <dd class="text-slate-700 text-lg mt-1">É um texto azul ou botão que, quando você clica, te leva para outra página na internet.</dd>
+                </div>
+
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <dt class="font-bold text-blue-900 text-xl">💸 PIX</dt>
+                    <dd class="text-slate-700 text-lg mt-1">Forma rápida de mandar dinheiro pelo celular. O dinheiro sai da sua conta na mesma hora.</dd>
+                </div>
+
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <dt class="font-bold text-blue-900 text-xl">📩 SMS</dt>
+                    <dd class="text-slate-700 text-lg mt-1">Mensagem de texto simples que chega no celular sem precisar de internet.</dd>
+                </div>
+
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <dt class="font-bold text-blue-900 text-xl">🔒 Cadeado de Segurança</dt>
+                    <dd class="text-slate-700 text-lg mt-1">Símbolo de um cadeado fechado no topo da tela do navegador, indicando que o site é seguro.</dd>
+                </div>
+            </dl>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-slate-900 text-white mt-12 py-8 text-center px-4 space-y-2">
+        <p class="text-xl font-bold">Guia Digital Seguro 🛡️</p>
+        <p class="text-slate-400 text-base max-w-2xl mx-auto">
+            Desenvolvido para ajudar idosos e familiares a navegar na internet com segurança e confiança. Compartilhe este guia com quem você ama!
+        </p>
+        <p class="text-xs text-slate-500 pt-4">Lembre-se: Na dúvida, pergunte sempre a alguém de confiança antes de clicar.</p>
+    </footer>
+
+</body>
+</html>
